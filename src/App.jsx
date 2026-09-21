@@ -1,4 +1,5 @@
 import './App.css';
+import expenses from './data/expenses';
 
 function App() {
   return (
@@ -52,33 +53,23 @@ function App() {
   </div>
 
   <div className="expenses__list">
-    <article className="expense">
+  {expenses.map((expense) => (
+    <article className="expense" key={expense.id}>
       <div className="expense__info">
-        <p className="expense__name">Cena</p>
-        <p className="expense__category">Comida · 21 sep</p>
+        <p className="expense__name">{expense.description}</p>
+
+        <p className="expense__category">
+          {expense.category} · {expense.date}
+        </p>
       </div>
 
-      <p className="expense__amount">−25,00 €</p>
+      <p className="expense__amount">
+        −{expense.amount.toFixed(2)} €
+      </p>
     </article>
+  ))}
+</div>
 
-    <article className="expense">
-      <div className="expense__info">
-        <p className="expense__name">Metro</p>
-        <p className="expense__category">Transporte · 20 sep</p>
-      </div>
-
-      <p className="expense__amount">−8,50 €</p>
-    </article>
-
-    <article className="expense">
-      <div className="expense__info">
-        <p className="expense__name">Camiseta</p>
-        <p className="expense__category">Compras · 19 sep</p>
-      </div>
-
-      <p className="expense__amount">−32,00 €</p>
-    </article>
-  </div>
 </section>
       </section>
     </main>

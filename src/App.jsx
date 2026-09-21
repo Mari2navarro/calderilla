@@ -10,6 +10,8 @@ const [monthlyBudget, setMonthlyBudget] = useState(null);
     0
   );
 
+  const availableBalance = monthlyBudget - totalExpenses;
+
    if (monthlyBudget === null) {
     return <BudgetSetup setMonthlyBudget={setMonthlyBudget} />;
   }
@@ -41,7 +43,9 @@ const [monthlyBudget, setMonthlyBudget] = useState(null);
     <span>€</span>
   </div>
 
-  <p className="balance__amount">327,50</p>
+  <p className="balance__amount">
+  {availableBalance.toFixed(2)}
+</p>
 
   <div className="balance__footer">
     <p>Septiembre 2026</p>

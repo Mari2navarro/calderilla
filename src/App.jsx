@@ -2,6 +2,11 @@ import './App.css';
 import expenses from './data/expenses';
 
 function App() {
+  const totalExpenses = expenses.reduce(
+    (total, expense) => total + expense.amount,
+    0
+  );
+
   return (
     <main className="app">
       <header className="app-header">
@@ -30,7 +35,9 @@ function App() {
 <section className="summary">
   <article className="summary-card">
     <p className="summary-card__label">Gastado este mes</p>
-    <p className="summary-card__amount">172,50 €</p>
+   <p className="summary-card__amount">
+  {totalExpenses.toFixed(2)} €
+</p>
   </article>
 
   <article className="summary-card summary-card--status">

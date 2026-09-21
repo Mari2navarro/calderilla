@@ -1,122 +1,88 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
+    <main className="app">
+      <header className="app-header">
         <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
+          <p className="app-header__brand">Calderilla</p>
+          <p className="app-header__tagline">Cada céntimo cuenta.</p>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
+
+        <p className="app-header__month">Septiembre 2026</p>
+      </header>
+
+      <section className="dashboard">
+      <div className="dashboard__intro">
+  <p>Buenos días 👋</p>
+  <h1>Tu dinero, de un vistazo.</h1>
+</div>
+
+<section className="balance-card">
+  <p className="balance-card__label">Disponible</p>
+
+  <p className="balance-card__amount">327,50 €</p>
+
+  <p className="balance-card__period">Septiembre 2026</p>
+</section>
+
+<section className="summary">
+  <article className="summary-card">
+    <p className="summary-card__label">Gastado este mes</p>
+    <p className="summary-card__amount">172,50 €</p>
+  </article>
+
+  <article className="summary-card summary-card--status">
+    <p className="summary-card__label">Estado</p>
+    <p className="summary-card__status">🟢 Vamos bien.</p>
+    <p className="summary-card__message">
+      Incluso puede que lleguemos sobrados.
+    </p>
+  </article>
+</section>
+
+<section className="expenses">
+  <div className="expenses__header">
+    <div>
+      <p className="expenses__eyebrow">Movimientos</p>
+      <h2>Últimos gastos</h2>
+    </div>
+
+    <button className="expenses__link">Ver todos</button>
+  </div>
+
+  <div className="expenses__list">
+    <article className="expense">
+      <div className="expense__info">
+        <p className="expense__name">Cena</p>
+        <p className="expense__category">Comida · 21 sep</p>
+      </div>
+
+      <p className="expense__amount">−25,00 €</p>
+    </article>
+
+    <article className="expense">
+      <div className="expense__info">
+        <p className="expense__name">Metro</p>
+        <p className="expense__category">Transporte · 20 sep</p>
+      </div>
+
+      <p className="expense__amount">−8,50 €</p>
+    </article>
+
+    <article className="expense">
+      <div className="expense__info">
+        <p className="expense__name">Camiseta</p>
+        <p className="expense__category">Compras · 19 sep</p>
+      </div>
+
+      <p className="expense__amount">−32,00 €</p>
+    </article>
+  </div>
+</section>
       </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+    </main>
+  );
 }
 
-export default App
+export default App;

@@ -16,27 +16,37 @@ const [monthlyBudget, setMonthlyBudget] = useState(null);
 
   return (
     <main className="app">
-      <header className="app-header">
-        <div>
-          <p className="app-header__brand">Calderilla</p>
-          <p className="app-header__tagline">Cada céntimo cuenta.</p>
-        </div>
+     <header className="app-header">
+  <p className="app-header__brand">Calderilla<span>.</span></p>
 
-        <p className="app-header__month">Septiembre 2026</p>
-      </header>
+  <div className="app-header__meta">
+    <p>Septiembre 2026</p>
+    <p>01 / 03</p>
+  </div>
+</header>
 
       <section className="dashboard">
       <div className="dashboard__intro">
   <p>Buenos días 👋</p>
-  <h1>Tu dinero, de un vistazo.</h1>
+  <h1>
+  Tu dinero,
+  <br />
+  de un vistazo.
+</h1>
 </div>
 
-<section className="balance-card">
-  <p className="balance-card__label">Disponible</p>
+<section className="balance">
+  <div className="balance__header">
+    <p>Disponible</p>
+    <span>€</span>
+  </div>
 
-  <p className="balance-card__amount">327,50 €</p>
+  <p className="balance__amount">327,50</p>
 
-  <p className="balance-card__period">Septiembre 2026</p>
+  <div className="balance__footer">
+    <p>Septiembre 2026</p>
+    <p>Saldo actual</p>
+  </div>
 </section>
 
 <section className="summary">

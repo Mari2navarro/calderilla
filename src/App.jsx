@@ -1,11 +1,18 @@
+import { useState } from 'react';
 import './App.css';
 import expenses from './data/expenses';
+import BudgetSetup from './components/BudgetSetup';
 
 function App() {
-  const totalExpenses = expenses.reduce(
+const [monthlyBudget, setMonthlyBudget] = useState(null);
+ const totalExpenses = expenses.reduce(
     (total, expense) => total + expense.amount,
     0
   );
+
+   if (monthlyBudget === null) {
+    return <BudgetSetup setMonthlyBudget={setMonthlyBudget} />;
+  }
 
   return (
     <main className="app">

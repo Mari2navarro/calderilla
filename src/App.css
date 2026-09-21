@@ -196,3 +196,86 @@
   font-weight: 600;
   white-space: nowrap;
 }
+
+.budget-setup {
+  min-height: 100vh;
+  width: min(100% - 32px, 640px);
+  margin: 0 auto;
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.budget-setup__brand {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.budget-setup__content {
+  margin: auto 0;
+  padding: 64px 0;
+}
+
+.budget-setup__eyebrow {
+  margin: 0 0 12px;
+  color: #737373;
+  font-size: 0.9rem;
+}
+
+.budget-setup h1 {
+  max-width: 550px;
+  margin: 0 0 40px;
+  font-size: clamp(2.5rem, 10vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.budget-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.budget-form label {
+  color: #737373;
+  font-size: 0.85rem;
+}
+
+.budget-form__input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 20px;
+  border: 1px solid #dcdcdc;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.budget-form__input input {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.budget-form__input span {
+  color: #737373;
+  font-size: 1.2rem;
+}
+
+.budget-form button {
+  margin-top: 8px;
+  padding: 16px 24px;
+  border: 0;
+  border-radius: 16px;
+  background: #191919;
+  color: #ffffff;
+  font-weight: 600;
+}

@@ -11,6 +11,21 @@ const [monthlyBudget, setMonthlyBudget] = useState(null);
   );
 
   const availableBalance = monthlyBudget - totalExpenses;
+  const remainingPercentage = availableBalance / monthlyBudget;
+
+  let status = '';
+let statusMessage = '';
+
+if (remainingPercentage >= 0.5) {
+  status = '🟢 Vamos bien.';
+  statusMessage = 'Incluso puede que lleguemos sobrados.';
+} else if (remainingPercentage >= 0.2) {
+  status = '🟡 Ojo ahí.';
+  statusMessage = 'Quizá ese café de 4,50 € pueda esperar.';
+} else {
+  status = '🔴 Estamos justitos.';
+  statusMessage = 'Toca mirar dónde se está yendo la pasta.';
+}
 
    if (monthlyBudget === null) {
     return <BudgetSetup setMonthlyBudget={setMonthlyBudget} />;
@@ -62,11 +77,11 @@ const [monthlyBudget, setMonthlyBudget] = useState(null);
   </article>
 
   <article className="summary-card summary-card--status">
-    <p className="summary-card__label">Estado</p>
-    <p className="summary-card__status">🟢 Vamos bien.</p>
-    <p className="summary-card__message">
-      Incluso puede que lleguemos sobrados.
-    </p>
+   <p className="summary-card__status">{status}</p>
+
+<p className="summary-card__message">
+  {statusMessage}
+</p>
   </article>
 </section>
 

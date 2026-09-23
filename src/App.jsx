@@ -75,6 +75,16 @@ function App() {
     statusMessage = "Toca mirar dónde se está yendo la pasta.";
   }
 
+  let statusClass;
+
+  if (remainingPercentage >= 0.5) {
+    statusClass = "good";
+  } else if (remainingPercentage >= 0.2) {
+    statusClass = "warning";
+  } else {
+    statusClass = "danger";
+  }
+
   return (
     <main className="app">
       <header className="app-header">
@@ -112,7 +122,7 @@ function App() {
         </section>
 
         <section className="summary">
-          <article className="summary-card">
+          <article className={`summary-card summary-card--${statusClass}`}>
             <p className="summary-card__label">Gastado este mes</p>
             <p className="summary-card__amount">{totalExpenses.toFixed(2)} €</p>
           </article>

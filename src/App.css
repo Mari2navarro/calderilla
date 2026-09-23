@@ -102,6 +102,18 @@
   border-radius: 20px;
 }
 
+.summary-card--good {
+  background: #b8d86a;
+}
+
+.summary-card--warning {
+  background: #f2c94c;
+}
+
+.summary-card--danger {
+  background: #ff6b5e;
+}
+
 .summary-card__label {
   margin: 0 0 24px;
   color: #737373;
@@ -115,7 +127,7 @@
   font-size: clamp(3rem, 10vw, 6rem);
   line-height: 0.85;
   font-weight: 600;
-  letter-spacing: -0.08em;
+  letter-spacing: -0.04em;
 }
 
 .summary-card__status {

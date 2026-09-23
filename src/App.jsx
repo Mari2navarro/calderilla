@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import initialExpenses from './data/expenses';
 import BudgetSetup from './components/BudgetSetup';
@@ -6,7 +6,21 @@ import ExpenseForm from './components/ExpenseForm';
 
 function App() {
 const [monthlyBudget, setMonthlyBudget] = useState(null);
-const [expenses, setExpenses] = useState(initialExpenses);
+const [expenses, setExpenses] = useState(() => {
+  const savedExpenses = localStorage.getItem('calderilla-expenses');
+
+  if (savedExpenses) {
+    return JSON.parse(savedExpenses);
+  }
+
+  return initialExpenses;
+});
+useEffect(() => {
+  localStorage.setItem(
+    'calderilla-expenses',
+    JSON.stringify(expenses)
+  );
+}, [expenses]);
 const handleDeleteExpense = (id) => {
  const updatedExpenses = expenses.filter(
   (expense) => expense.id !== id
@@ -122,6 +136,7 @@ if (remainingPercentage >= 0.5) {
       </p>
 
       <button
+      className="expense__delete"
   type="button"
   onClick={() => handleDeleteExpense(expense.id)}
 >

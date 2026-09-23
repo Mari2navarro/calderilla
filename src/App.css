@@ -204,10 +204,6 @@
   font-weight: 600;
 }
 
-/* =========================
-   BUDGET SETUP
-   ========================= */
-
 .budget-setup {
   min-height: 100vh;
   width: min(100% - 32px, 1200px);
@@ -305,10 +301,6 @@
   text-underline-offset: 5px;
 }
 
-/* =========================
-   EXPENSE FORM
-   ========================= */
-
 .expense-form {
   margin-top: 64px;
   padding: 32px 0;
@@ -383,4 +375,17 @@
   letter-spacing: 0.06em;
   text-decoration: underline;
   text-underline-offset: 5px;
+}
+
+.expense__delete {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #737373;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.expense__delete:hover {
+  color: #191919;
 }

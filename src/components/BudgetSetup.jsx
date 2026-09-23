@@ -4,10 +4,14 @@ function BudgetSetup({ setMonthlyBudget }) {
   const [budget, setBudget] = useState('');
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    setMonthlyBudget(Number(budget));
-  };
+  if (Number(budget) <= 0) {
+    return;
+  }
+
+  setMonthlyBudget(Number(budget));
+};
 
   return (
     <main className="budget-setup">
@@ -35,6 +39,7 @@ function BudgetSetup({ setMonthlyBudget }) {
             <input
               id="budget"
               type="number"
+              min="1"
               placeholder="1.200"
               value={budget}
               onChange={(event) => setBudget(event.target.value)}

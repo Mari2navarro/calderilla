@@ -347,6 +347,11 @@
   color: #f6f5f2;
 }
 
+.expense-form select option {
+  background: #191919;
+  color: #f6f5f2;
+}
+
 .expense-form input::placeholder {
   color: #737373;
 }

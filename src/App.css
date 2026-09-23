@@ -431,3 +431,41 @@
     padding: 28px 0;
   }
 }
+
+.budget-form button,
+.expense-form button {
+  transition:
+    transform 150ms ease,
+    opacity 150ms ease;
+}
+
+.budget-form button:hover,
+.expense-form button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.expense__delete {
+  transition:
+    background-color 150ms ease,
+    color 150ms ease,
+    transform 150ms ease;
+}
+
+.expense__delete:hover {
+  background: #191919;
+  color: #f6f5f2;
+  transform: scale(1.05);
+}
+
+.expense-form input:focus-visible,
+.expense-form select:focus-visible {
+  border-bottom-color: #b8d86a;
+}
+
+.expense-form button:focus-visible,
+.budget-form button:focus-visible,
+.expense__delete:focus-visible {
+  outline: 2px solid #b8d86a;
+  outline-offset: 4px;
+}

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import initialExpenses from "./data/expenses";
 import BudgetSetup from "./components/BudgetSetup";
 import ExpenseForm from "./components/ExpenseForm";
 
@@ -22,7 +21,7 @@ function App() {
       return JSON.parse(savedExpenses);
     }
 
-    return initialExpenses;
+    return [];
   });
 
   const [selectedCategory, setSelectedCategory] = useState("Todas");

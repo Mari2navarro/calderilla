@@ -46,9 +46,9 @@
 }
 
 .balance {
-  padding: 32px 0;
-  border-top: 1px solid #191919;
-  border-bottom: 1px solid #191919;
+  margin-top: 64px;
+  padding: 32px;
+  background: #b8d86a;
 }
 
 .balance__header,
@@ -76,7 +76,7 @@
 }
 
 .balance__amount {
-  margin: 32px 0;
+  margin: 48px 0;
   font-size: clamp(4rem, 15vw, 10rem);
   line-height: 0.8;
   font-weight: 600;
@@ -84,20 +84,22 @@
 }
 
 .balance__footer {
-  color: #737373;
+  padding-top: 24px;
+  border-top: 1px solid #191919;
+  color: #191919;
 }
+
 .summary {
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 64px;
-  border-bottom: 1px solid #191919;
+  gap: 16px;
+  margin-top: 24px;
 }
 
 .summary-card {
-  padding: 32px 0;
-  border-top: 1px solid #191919;
-  background: transparent;
-  border-radius: 0;
+  padding: 28px;
+  background: #ffffff;
+  border-radius: 20px;
 }
 
 .summary-card__label {
@@ -117,20 +119,20 @@
 }
 
 .summary-card__status {
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .summary-card__message {
   max-width: 320px;
   margin: 0;
-  color: #737373;
+  color: #191919;
   line-height: 1.5;
 }
 
 .expenses {
-  margin-top: 64px;
+  margin-top: 72px;
 }
 
 .expenses__header {
@@ -138,35 +140,35 @@
   justify-content: space-between;
   align-items: end;
   gap: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #191919;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #191919;
 }
 
 .expenses__eyebrow {
   margin: 0 0 8px;
   color: #737373;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
 }
 
 .expenses__header h2 {
   margin: 0;
-  font-size: 2rem;
-  line-height: 1;
-  letter-spacing: -0.05em;
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
 }
 
 .expenses__link {
-  padding: 0;
-  border: 0;
+  padding: 8px 14px;
+  border: 1px solid #191919;
+  border-radius: 999px;
   background: transparent;
   color: #191919;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  text-decoration: underline;
-  text-underline-offset: 4px;
 }
 
 .expenses__list {
@@ -174,11 +176,11 @@
 }
 
 .expense {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
   align-items: center;
-  gap: 24px;
-  padding: 24px 0;
+  gap: 16px;
+  padding: 20px 0;
   border-bottom: 1px solid #dcdcdc;
 }
 
@@ -188,25 +190,27 @@
 
 .expense__name {
   margin: 0 0 6px;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .expense__category {
   margin: 0;
   color: #737373;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 .expense__amount {
   flex-shrink: 0;
   margin: 0;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .budget-setup {
   min-height: 100vh;
-  width: min(100% - 32px, 1200px);
+  width: min(100% - 48px, 1200px);
   margin: 0 auto;
   padding: 24px 0;
   display: flex;
@@ -228,20 +232,20 @@
 }
 
 .budget-setup__eyebrow {
-  margin: 0 0 16px;
+  margin: 0 0 20px;
   color: #737373;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
 }
 
 .budget-setup h1 {
   max-width: 850px;
-  margin: 0 0 64px;
-  font-size: clamp(3.5rem, 9vw, 7rem);
-  line-height: 0.88;
-  letter-spacing: -0.08em;
+  margin: 0 0 56px;
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  line-height: 0.85;
+  letter-spacing: -0.09em;
 }
 
 .budget-form {
@@ -273,9 +277,9 @@
   outline: 0;
   background: transparent;
   color: #191919;
-  font-size: clamp(2.5rem, 8vw, 5rem);
-  font-weight: 600;
-  letter-spacing: -0.07em;
+  font-size: clamp(3rem, 9vw, 6rem);
+  font-weight: 700;
+  letter-spacing: -0.08em;
 }
 
 .budget-form__input input::placeholder {
@@ -284,45 +288,46 @@
 
 .budget-form__input span {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .budget-form button {
   margin-top: 32px;
-  padding: 0;
+  padding: 14px 22px;
   border: 0;
-  background: transparent;
+  border-radius: 999px;
+  background: #b8d86a;
   color: #191919;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  text-decoration: underline;
-  text-underline-offset: 5px;
 }
 
 .expense-form {
-  margin-top: 64px;
-  padding: 32px 0;
-  border-top: 1px solid #191919;
-  border-bottom: 1px solid #191919;
+  margin-top: 72px;
+  padding: 32px;
+  background: #191919;
+  color: #f6f5f2;
+  border-radius: 24px;
 }
 
 .expense-form__header {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .expense-form__header p {
   margin: 0 0 8px;
-  color: #737373;
-  font-size: 0.75rem;
+  color: #b8d86a;
+  font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
 }
 
 .expense-form__header h2 {
   margin: 0;
+  max-width: 500px;
   font-size: clamp(2rem, 6vw, 3.5rem);
   line-height: 0.95;
   letter-spacing: -0.06em;
@@ -335,10 +340,10 @@
 
 .expense-form label {
   margin-bottom: -16px;
-  color: #737373;
-  font-size: 0.75rem;
+  color: #bdbdbd;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
 }
 
 .expense-form input,
@@ -346,11 +351,15 @@
   width: 100%;
   padding: 12px 0;
   border: 0;
-  border-bottom: 1px solid #191919;
+  border-bottom: 1px solid #737373;
   border-radius: 0;
   outline: 0;
   background: transparent;
-  color: #191919;
+  color: #f6f5f2;
+}
+
+.expense-form input::placeholder {
+  color: #737373;
 }
 
 .expense-form input:focus,
@@ -363,26 +372,28 @@
 }
 
 .expense-form button {
-  justify-self: center;
+  justify-self: start;
   margin-top: 8px;
-  padding: 0;
+  padding: 12px 20px;
   border: 0;
-  background: transparent;
+  border-radius: 999px;
+  background: #b8d86a;
   color: #191919;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  text-decoration: underline;
-  text-underline-offset: 5px;
 }
 
 .expense__delete {
+  width: 32px;
+  height: 32px;
   padding: 0;
-  border: 0;
+  border: 1px solid #dcdcdc;
+  border-radius: 50%;
   background: transparent;
   color: #737373;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   line-height: 1;
 }
 
@@ -420,11 +431,11 @@
 @media (min-width: 768px) {
   .summary {
     grid-template-columns: repeat(2, 1fr);
-    gap: 48px;
+    gap: 16px;
   }
 
   .summary-card {
-    padding: 40px 0;
+    padding: 32px;
   }
 
   .expense {

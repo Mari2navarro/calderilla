@@ -1,5 +1,5 @@
 .app {
- width: min(100% - 48px, 1200px);
+  width: min(100% - 48px, 1200px);
   margin: 0 auto;
 }
 

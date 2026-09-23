@@ -1,26 +1,24 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 function BudgetSetup({ setMonthlyBudget }) {
-  const [budget, setBudget] = useState('');
+  const [budget, setBudget] = useState("");
 
   const handleSubmit = (event) => {
-  event.preventDefault();
+    event.preventDefault();
 
-  if (Number(budget) <= 0) {
-    return;
-  }
+    if (Number(budget) <= 0) {
+      return;
+    }
 
-  setMonthlyBudget(Number(budget));
-};
+    setMonthlyBudget(Number(budget));
+  };
 
   return (
     <main className="budget-setup">
       <p className="budget-setup__brand">Calderilla</p>
 
       <section className="budget-setup__content">
-        <p className="budget-setup__eyebrow">
-          Antes de gastar,
-        </p>
+        <p className="budget-setup__eyebrow">Antes de gastar,</p>
 
         <h1>
           Hagamos

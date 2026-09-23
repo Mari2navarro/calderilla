@@ -9,6 +9,10 @@ const [date, setDate] = useState('');
 const handleSubmit = (event) => {
   event.preventDefault();
 
+if (!description.trim() || Number(amount) <= 0 || !date) {
+    return;
+}
+
   const newExpense = {
     id: Date.now(),
     description: description,

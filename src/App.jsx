@@ -26,6 +26,8 @@ const [expenses, setExpenses] = useState(() => {
   return initialExpenses;
 });
 
+const [selectedCategory, setSelectedCategory] = useState('Todas');
+
 useEffect(() => {
   localStorage.setItem(
     'calderilla-expenses',
@@ -140,6 +142,21 @@ if (remainingPercentage >= 0.5) {
 
     <button className="expenses__link">Ver todos</button>
   </div>
+
+<select
+className="expenses__filter"
+  value={selectedCategory}
+  onChange={(event) => setSelectedCategory(event.target.value)}
+>
+  <option value="Todas">Todas</option>
+  <option value="Comida">Comida</option>
+  <option value="Compras">Compras</option>
+  <option value="Transporte">Transporte</option>
+  <option value="Ocio">Ocio</option>
+  <option value="Casa">Casa</option>
+  <option value="Salud">Salud</option>
+  <option value="Otros">Otros</option>
+</select>
 
   <div className="expenses__list">
   {expenses.map((expense) => (

@@ -389,3 +389,23 @@
 .expense__delete:hover {
   color: #191919;
 }
+
+.expenses__filter {
+  width: 100%;
+  margin: 24px 0 0;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid #191919;
+  border-radius: 0;
+  outline: 0;
+  background: transparent;
+  color: #191919;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+
+.expenses__filter:focus {
+  border-bottom-width: 2px;
+}

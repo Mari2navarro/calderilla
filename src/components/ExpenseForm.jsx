@@ -21,6 +21,11 @@ const handleSubmit = (event) => {
     ...currentExpenses,
     newExpense,
   ]);
+  
+  setDescription('');
+setAmount('');
+setCategory('Comida');
+setDate('');
 };
 
   return (

@@ -7,6 +7,14 @@ import ExpenseForm from './components/ExpenseForm';
 function App() {
 const [monthlyBudget, setMonthlyBudget] = useState(null);
 const [expenses, setExpenses] = useState(initialExpenses);
+const handleDeleteExpense = (id) => {
+ const updatedExpenses = expenses.filter(
+  (expense) => expense.id !== id
+ );
+
+ setExpenses(updatedExpenses);
+
+};
  const totalExpenses = expenses.reduce(
     (total, expense) => total + expense.amount,
     0
@@ -112,6 +120,14 @@ if (remainingPercentage >= 0.5) {
       <p className="expense__amount">
         −{expense.amount.toFixed(2)} €
       </p>
+
+      <button
+  type="button"
+  onClick={() => handleDeleteExpense(expense.id)}
+>
+  ×
+</button>
+
     </article>
   ))}
 </div>

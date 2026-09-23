@@ -1,16 +1,25 @@
-# React + Vite
+# 💸 Calderilla
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Cada céntimo cuenta.**
 
-Currently, two official plugins are available:
+Calderilla es una aplicación para llevar un control sencillo de los gastos del mes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Permite establecer un presupuesto mensual, añadir y eliminar gastos, filtrarlos por categoría y consultar de un vistazo cuánto dinero queda disponible.
 
-## React Compiler
+## 🚀 Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[Ver Calderilla] (https://calderilla.vercel.app/)
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- JavaScript
+- CSS
+- Vite
+- LocalStorage
+
+## 💡 Sobre el proyecto
+
+Este proyecto nace de una idea sencilla: tener una forma rápida y visual de saber en qué se va el dinero durante el mes.
+
+Lo he desarrollado como parte de mi aprendizaje como desarrolladora frontend, trabajando especialmente con gestión de estado en React, formularios, renderizado de listas, filtros y persistencia de datos con LocalStorage.

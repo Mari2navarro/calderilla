@@ -159,18 +159,6 @@
   letter-spacing: -0.06em;
 }
 
-.expenses__link {
-  padding: 8px 14px;
-  border: 1px solid #191919;
-  border-radius: 999px;
-  background: transparent;
-  color: #191919;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
 .expenses__list {
   border-bottom: 1px solid #191919;
 }
@@ -306,6 +294,7 @@
 
 .expense-form {
   margin-top: 72px;
+  margin-bottom: 56px;
   padding: 32px;
   background: #191919;
   color: #f6f5f2;

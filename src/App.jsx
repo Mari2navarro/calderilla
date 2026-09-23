@@ -85,7 +85,6 @@ function App() {
 
         <div className="app-header__meta">
           <p>Septiembre 2026</p>
-          <p>01 / 03</p>
         </div>
       </header>
 
@@ -131,10 +130,8 @@ function App() {
           <div className="expenses__header">
             <div>
               <p className="expenses__eyebrow">Movimientos</p>
-              <h2>Últimos gastos</h2>
+              <h2>Tus gastos</h2>
             </div>
-
-            <button className="expenses__link">Ver todos</button>
           </div>
 
           <select

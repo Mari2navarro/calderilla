@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import './App.css';
-import expenses from './data/expenses';
+import initialExpenses from './data/expenses';
 import BudgetSetup from './components/BudgetSetup';
+import ExpenseForm from './components/ExpenseForm';
 
 function App() {
 const [monthlyBudget, setMonthlyBudget] = useState(null);
+const [expenses, setExpenses] = useState(initialExpenses);
  const totalExpenses = expenses.reduce(
     (total, expense) => total + expense.amount,
     0
@@ -86,6 +88,7 @@ if (remainingPercentage >= 0.5) {
 </section>
 
 <section className="expenses">
+   <ExpenseForm setExpenses={setExpenses} />
   <div className="expenses__header">
     <div>
       <p className="expenses__eyebrow">Movimientos</p>

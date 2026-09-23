@@ -8,7 +8,7 @@ Permite establecer un presupuesto mensual, añadir y eliminar gastos, filtrarlos
 
 ## 🚀 Demo
 
-[Ver Calderilla] (https://calderilla.vercel.app/)
+[Ver Calderilla](https://calderilla.vercel.app/)
 
 ## 🛠️ Tecnologías
 

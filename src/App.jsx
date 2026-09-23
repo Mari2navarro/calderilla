@@ -57,6 +57,13 @@ const handleDeleteExpense = (id) => {
     0
   );
 
+  const filteredExpenses =
+  selectedCategory === 'Todas'
+    ? expenses
+    : expenses.filter(
+        (expense) => expense.category === selectedCategory
+      );
+
   const availableBalance = monthlyBudget - totalExpenses;
   const remainingPercentage = availableBalance / monthlyBudget;
 
@@ -159,7 +166,7 @@ className="expenses__filter"
 </select>
 
   <div className="expenses__list">
-  {expenses.map((expense) => (
+  {filteredExpenses.map((expense) => (
     <article className="expense" key={expense.id}>
       <div className="expense__info">
         <p className="expense__name">{expense.description}</p>

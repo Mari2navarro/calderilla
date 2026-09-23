@@ -64,6 +64,10 @@ const handleDeleteExpense = (id) => {
         (expense) => expense.category === selectedCategory
       );
 
+  const sortedExpenses = [...filteredExpenses].sort(
+  (a, b) => new Date(b.date) - new Date(a.date)
+);
+
   const availableBalance = monthlyBudget - totalExpenses;
   const remainingPercentage = availableBalance / monthlyBudget;
 
@@ -171,7 +175,7 @@ className="expenses__filter"
         No hay gastos en esta categoría.
       </p>
     ) : (
-  filteredExpenses.map((expense) => (
+  sortedExpenses.map((expense) => (
     <article className="expense" key={expense.id}>
       <div className="expense__info">
         <p className="expense__name">

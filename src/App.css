@@ -48,7 +48,7 @@
 .balance {
   margin-top: 64px;
   padding: 32px;
-  background: #b8d86a;
+  background: #1591ea;
 }
 
 .balance__header,
@@ -284,7 +284,7 @@
   padding: 14px 22px;
   border: 0;
   border-radius: 999px;
-  background: #b8d86a;
+  background: #1591ea;
   color: #191919;
   font-size: 0.75rem;
   font-weight: 700;
@@ -307,7 +307,7 @@
 
 .expense-form__header p {
   margin: 0 0 8px;
-  color: #b8d86a;
+  color: #1591ea;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -371,7 +371,7 @@
   padding: 12px 20px;
   border: 0;
   border-radius: 999px;
-  background: #b8d86a;
+  background: #1591ea;
   color: #191919;
   font-size: 0.75rem;
   font-weight: 700;
@@ -465,12 +465,12 @@
 
 .expense-form input:focus-visible,
 .expense-form select:focus-visible {
-  border-bottom-color: #b8d86a;
+  border-bottom-color: #1591ea;
 }
 
 .expense-form button:focus-visible,
 .budget-form button:focus-visible,
 .expense__delete:focus-visible {
-  outline: 2px solid #b8d86a;
+  outline: 2px solid #1591ea;
   outline-offset: 4px;
 }

@@ -227,8 +227,14 @@
 .budget-setup__content {
   width: 100%;
   max-width: 900px;
-  margin: auto 0;
+  margin: 0;
   padding: 64px 0;
+}
+
+@media (min-width: 768px) {
+  .budget-setup__content {
+    margin: auto 0;
+  }
 }
 
 .budget-setup__eyebrow {

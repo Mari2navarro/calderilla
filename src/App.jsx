@@ -5,7 +5,17 @@ import BudgetSetup from './components/BudgetSetup';
 import ExpenseForm from './components/ExpenseForm';
 
 function App() {
-const [monthlyBudget, setMonthlyBudget] = useState(null);
+
+const [monthlyBudget, setMonthlyBudget] = useState(() => {
+  const savedBudget = localStorage.getItem('calderilla-budget');
+
+  if (savedBudget) {
+    return JSON.parse(savedBudget);
+  }
+
+  return null;
+});
+
 const [expenses, setExpenses] = useState(() => {
   const savedExpenses = localStorage.getItem('calderilla-expenses');
 
@@ -15,12 +25,23 @@ const [expenses, setExpenses] = useState(() => {
 
   return initialExpenses;
 });
+
 useEffect(() => {
   localStorage.setItem(
     'calderilla-expenses',
     JSON.stringify(expenses)
   );
 }, [expenses]);
+
+useEffect(() => {
+  if (monthlyBudget !== null) {
+    localStorage.setItem(
+      'calderilla-budget',
+      JSON.stringify(monthlyBudget)
+    );
+  }
+}, [monthlyBudget]);
+
 const handleDeleteExpense = (id) => {
  const updatedExpenses = expenses.filter(
   (expense) => expense.id !== id

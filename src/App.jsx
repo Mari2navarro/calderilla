@@ -166,10 +166,17 @@ className="expenses__filter"
 </select>
 
   <div className="expenses__list">
-  {filteredExpenses.map((expense) => (
+    {filteredExpenses.length === 0 ? (
+      <p className="expenses__empty">
+        No hay gastos en esta categoría.
+      </p>
+    ) : (
+  filteredExpenses.map((expense) => (
     <article className="expense" key={expense.id}>
       <div className="expense__info">
-        <p className="expense__name">{expense.description}</p>
+        <p className="expense__name">
+          {expense.description}
+        </p>
 
         <p className="expense__category">
           {expense.category} · {expense.date}
@@ -182,14 +189,14 @@ className="expenses__filter"
 
       <button
       className="expense__delete"
-  type="button"
-  onClick={() => handleDeleteExpense(expense.id)}
+      type="button"
+      onClick={() => handleDeleteExpense(expense.id)}
 >
   ×
-</button>
-
-    </article>
-  ))}
+  </button>
+</article>
+  ))
+)}
 </div>
 
 </section>

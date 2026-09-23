@@ -409,3 +409,10 @@
 .expenses__filter:focus {
   border-bottom-width: 2px;
 }
+
+.expenses__empty {
+  margin: 0;
+  padding: 32px 0;
+  color: #737373;
+  font-size: 0.9rem;
+}

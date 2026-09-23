@@ -416,3 +416,18 @@
   color: #737373;
   font-size: 0.9rem;
 }
+
+@media (min-width: 768px) {
+  .summary {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+  }
+
+  .summary-card {
+    padding: 40px 0;
+  }
+
+  .expense {
+    padding: 28px 0;
+  }
+}
